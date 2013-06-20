@@ -269,6 +269,7 @@
                         headers: headers,
                         crossDomain: true,
                         beforeSend: function (xhr) {
+			    alert('sending');
                             if (authentication_delivery == 'http_basic') {
                                 xhr.setRequestHeader('Authorization', 'Basic ' + btoa($('#api_key').val() + ':' + $('#api_pass').val()));
                             }
